@@ -379,7 +379,7 @@ if (accountGreeting) {
     // Tomamos solo la parte antes del "@" y la ponemos con mayúscula inicial
     const namePart = email.split('@')[0];
     const displayName = namePart.charAt(0).toUpperCase() + namePart.slice(1);
-    accountGreeting.textContent = 'Hola de nuevo, ' + displayName + ' 👋';
+    accountGreeting.textContent = 'Hola de nuevo, ' + displayName;
   }
 
   // 2. Preferencias nutricionales con localStorage

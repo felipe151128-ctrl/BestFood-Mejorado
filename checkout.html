@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https://images.pexels.com data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Revisa los datos de contacto, entrega y pago de tu pedido BestFood.">
@@ -14,13 +17,16 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
   <header class="site-nav">
     <a href="index.html" class="nav-logo">
-      <img loading="lazy" decoding="async" src="assets/logo.png" alt="BestFood" class="nav-logo-icon">
+      <img loading="eager" decoding="async" src="assets/logo.png" alt="BestFood" class="nav-logo-icon">
       BestFood
     </a>
   </header>
+  <main id="main-content">
+
 
   <section class="checkout-wrap">
 
@@ -70,35 +76,14 @@
         </div>
 
         <div class="checkout-block" id="checkout-payment">
-          <h2>Pago</h2>
-          <div class="card-brands">
-            <span class="card-brand visa">VISA</span>
-            <span class="card-brand mc">MC</span>
-            <span class="card-brand amex">AMEX</span>
-          </div>
-
-          <div class="field">
-            <label for="card-number">Número de tarjeta</label>
-            <input type="text" id="card-number" placeholder="0000 0000 0000 0000" maxlength="19" inputmode="numeric" required>
-          </div>
-
-          <div class="field-row-split">
-            <div class="field">
-              <label for="card-expiry">Vencimiento</label>
-              <input type="text" id="card-expiry" placeholder="MM/AA" maxlength="5" required>
-            </div>
-            <div class="field">
-              <label for="card-cvv">Código de seguridad</label>
-              <input type="text" id="card-cvv" placeholder="123" maxlength="3" inputmode="numeric" required>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="card-name">Nombre del titular</label>
-            <input type="text" id="card-name" placeholder="Como aparece en la tarjeta" required>
-          </div>
-
-          <button type="submit" class="btn-primary btn-block" id="pay-btn">Pagar <span id="pay-btn-total">$0</span></button>
+          <h2>Confirmación de demostración</h2>
+          <p class="demo-payment-notice" id="demo-payment-notice" role="note">
+            Este sitio es un prototipo académico. No ingreses números de tarjeta, códigos CVV ni datos bancarios reales.
+            Al continuar solo se simulará la confirmación del pedido; no se realizará ningún cobro.
+          </p>
+          <button type="submit" class="btn-primary btn-block" id="pay-btn">
+            Confirmar pedido de demostración <span id="pay-btn-total">$0</span>
+          </button>
         </div>
       </form>
     </div>
@@ -107,7 +92,7 @@
     <div class="checkout-summary-col">
       <div class="checkout-summary">
         <div class="summary-item">
-          <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/725991/pexels-photo-725991.jpeg?cs=tinysrgb&w=200" alt="Plan BestFood" class="summary-thumb">
+          <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/725991/pexels-photo-725991.jpeg?cs=tinysrgb&w=200" alt="Plan BestFood" class="summary-thumb" referrerpolicy="no-referrer" data-source="Pexels">
           <div>
             <p class="summary-item-title">Plan <span id="summary-plan">—</span></p>
             <p class="summary-item-sub"><span id="summary-meals">—</span> · <span id="summary-delivery">—</span></p>
@@ -132,14 +117,18 @@
     <!-- ============ MENSAJE DE ÉXITO (oculto hasta pagar) ============ -->
     <div class="checkout-success" id="checkout-success">
       <div class="success-icon">✓</div>
-      <h2>¡Pedido confirmado!</h2>
-      <p>Tu suscripción a BestFood quedó activada. Te enviamos la confirmación a tu correo.</p>
+      <h2>¡Pedido de demostración confirmado!</h2>
+      <p>La simulación terminó correctamente. No se procesó ningún pago ni se creó una suscripción real.</p>
       <a href="cuenta.html" class="btn-ghost btn-block">Ir a mi cuenta</a>
     </div>
 
   </section>
 
-  <script src="js/script.js"></script>
+  
+  </main>
+<script src="js/script.js"></script>
   <script src="js/integracion-platos.js"></script>
+
+  <p class="media-credits">Fotografías de platos: <a href="https://www.pexels.com/license/" target="_blank" rel="noopener noreferrer">Pexels · consultar licencia de uso</a>.</p>
 </body>
 </html>

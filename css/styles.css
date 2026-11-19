@@ -141,6 +141,7 @@ body {
 /* ============================================
    PANEL DERECHO — FORMULARIO
    ============================================ */
+/* Fotografía de fondo: Pexels; licencia consultable en https://www.pexels.com/license/ */
 .form-panel {
   position: relative;
   overflow: hidden;
@@ -1641,4 +1642,45 @@ a { color: inherit; }
 :focus-visible { outline: 3px solid #1D4ED8; outline-offset: 3px; border-radius: 4px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+
+/* Mejoras de calidad: navegación por teclado, créditos y aviso de pago de demostración. */
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 10000;
+  transform: translateY(-160%);
+  padding: 0.75rem 1rem;
+  border-radius: 0.6rem;
+  background: #16301F;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: none;
+}
+.skip-link:focus { transform: translateY(0); }
+.media-credits {
+  padding: 0.75rem 1rem;
+  color: #55584F;
+  background: #FBFBF7;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.media-credits a { color: #1F3D2B; text-decoration: underline; text-underline-offset: 2px; }
+.demo-payment-notice {
+  margin: 0 0 1.25rem;
+  padding: 1rem;
+  border: 1px solid #8A5A00;
+  border-left-width: 4px;
+  border-radius: 0.75rem;
+  background: #FFF8E8;
+  color: #493400;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+:where(input, select, textarea, button, a):focus-visible {
+  outline: 3px solid #1D4ED8;
+  outline-offset: 3px;
 }

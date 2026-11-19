@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https://images.pexels.com data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Programa la frecuencia, el día y el horario de entrega de tu pedido BestFood.">
@@ -12,14 +15,15 @@
   <link rel="stylesheet" href="css/programar-entrega.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
   <header class="site-nav">
     <a href="index.html" class="nav-logo">
-      <img loading="lazy" decoding="async" src="assets/logo.png" alt="BestFood" class="nav-logo-icon"> BestFood
+      <img loading="eager" decoding="async" src="assets/logo.png" alt="BestFood" class="nav-logo-icon"> BestFood
     </a>
     <div class="nav-actions"><a href="seleccionar-platos.html" class="link-muted">← Volver a los platos</a></div>
   </header>
 
-  <main class="delivery-wrap">
+  <main class="delivery-wrap" id="main-content">
     <p class="eyebrow-plain">CASI ESTÁ LISTO</p>
     <h1>¿Cuándo te lo llevamos?</h1>
     <p class="delivery-intro">Escoge el día y la franja horaria que mejor se adapte a tu semana. Podrás revisar tu elección antes de confirmar.</p>
@@ -69,5 +73,7 @@
     </form>
   </main>
   <script src="js/programar-entrega.js"></script>
+
+  <p class="media-credits">Fotografías de platos: <a href="https://www.pexels.com/license/" target="_blank" rel="noopener noreferrer">Pexels · consultar licencia de uso</a>.</p>
 </body>
 </html>

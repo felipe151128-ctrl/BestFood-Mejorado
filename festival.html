@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https://images.pexels.com data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Descubre los días de festival gastronómico de BestFood y sabores de distintas cocinas del mundo.">
@@ -14,11 +17,12 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
   <!-- ============ NAV ============ -->
   <header class="site-nav">
     <a href="index.html" class="nav-logo">
-      <img loading="lazy" decoding="async" src="assets/logo.png" alt="BestFood" class="nav-logo-icon">
+      <img loading="eager" decoding="async" src="assets/logo.png" alt="BestFood" class="nav-logo-icon">
       BestFood
     </a>
     <div class="nav-actions nav-icons">
@@ -30,6 +34,8 @@
       </a>
     </div>
   </header>
+  <main id="main-content">
+
 
   <!-- ============ HERO DEL FESTIVAL ============ -->
   <section class="festival-hero">
@@ -79,7 +85,7 @@
     <div class="festival-grid">
 
       <div class="festival-card">
-        <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/37092781/pexels-photo-37092781/free-photo-of-traditional-argentine-asado-on-parilla-grill.jpeg?cs=tinysrgb&w=700" alt="Asado argentino a la parrilla">
+        <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/37092781/pexels-photo-37092781/free-photo-of-traditional-argentine-asado-on-parilla-grill.jpeg?cs=tinysrgb&w=700" alt="Asado argentino a la parrilla" referrerpolicy="no-referrer" data-source="Pexels">
         <div class="festival-card-body">
           <p class="festival-flag">🇦🇷 Argentina</p>
           <h3>Asado a la parrilla</h3>
@@ -88,7 +94,7 @@
       </div>
 
       <div class="festival-card">
-        <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/3391962/pexels-photo-3391962.jpeg?cs=tinysrgb&w=700" alt="Tacos al pastor mexicanos">
+        <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/3391962/pexels-photo-3391962.jpeg?cs=tinysrgb&w=700" alt="Tacos al pastor mexicanos" referrerpolicy="no-referrer" data-source="Pexels">
         <div class="festival-card-body">
           <p class="festival-flag">🇲🇽 México</p>
           <h3>Tacos al pastor</h3>
@@ -97,7 +103,7 @@
       </div>
 
       <div class="festival-card">
-        <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/6223229/pexels-photo-6223229.jpeg?cs=tinysrgb&w=700" alt="Pasta italiana">
+        <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/6223229/pexels-photo-6223229.jpeg?cs=tinysrgb&w=700" alt="Pasta italiana" referrerpolicy="no-referrer" data-source="Pexels">
         <div class="festival-card-body">
           <p class="festival-flag">🇮🇹 Italia</p>
           <h3>Trattoria italiana</h3>
@@ -106,7 +112,7 @@
       </div>
 
       <div class="festival-card">
-        <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/884600/pexels-photo-884600.jpeg?cs=tinysrgb&w=700" alt="Ramen japonés">
+        <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/884600/pexels-photo-884600.jpeg?cs=tinysrgb&w=700" alt="Ramen japonés" referrerpolicy="no-referrer" data-source="Pexels">
         <div class="festival-card-body">
           <p class="festival-flag">🇯🇵 Japón</p>
           <h3>Ramen casero</h3>
@@ -115,7 +121,7 @@
       </div>
 
       <div class="festival-card">
-        <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/33833438/pexels-photo-33833438.jpeg?cs=tinysrgb&w=700" alt="Croissant francés">
+        <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/33833438/pexels-photo-33833438.jpeg?cs=tinysrgb&w=700" alt="Croissant francés" referrerpolicy="no-referrer" data-source="Pexels">
         <div class="festival-card-body">
           <p class="festival-flag">🇫🇷 Francia</p>
           <h3>Bistró francés</h3>
@@ -124,7 +130,7 @@
       </div>
 
       <div class="festival-card">
-        <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/34723309/pexels-photo-34723309/free-photo-of-delicious-pad-thai-with-shrimp-and-peanuts.jpeg?cs=tinysrgb&w=700" alt="Pad thai tailandés">
+        <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/34723309/pexels-photo-34723309/free-photo-of-delicious-pad-thai-with-shrimp-and-peanuts.jpeg?cs=tinysrgb&w=700" alt="Pad thai tailandés" referrerpolicy="no-referrer" data-source="Pexels">
         <div class="festival-card-body">
           <p class="festival-flag">🇹🇭 Tailandia</p>
           <h3>Pad thai</h3>
@@ -143,10 +149,14 @@
   </section>
 
   <!-- ============ FOOTER SIMPLE ============ -->
-  <footer class="site-footer">
+  
+  </main>
+<footer class="site-footer">
     <p class="footer-copy" style="text-align:center;">© 2026 BestFood. Proyecto universitario.</p>
   </footer>
 
   <script src="js/script.js"></script>
+
+  <p class="media-credits">Fotografías de platos: <a href="https://www.pexels.com/license/" target="_blank" rel="noopener noreferrer">Pexels · consultar licencia de uso</a>.</p>
 </body>
 </html>
